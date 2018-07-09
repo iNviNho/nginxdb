@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginxproxy
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - proxy
+
+  hazarder-mysql:
+    image: mysql:5.7
+    container_name: database
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: hazarder
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: false
