@@ -6,13 +6,17 @@ services:
     container_name: nginx
     restart: always
     ports:
-      - 80:80
       - 443:443
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /etc/letsencrypt/archive/vladino.me:/etc/nginx/certs
     networks:
       - proxy
+    environment:
+      - VIRTUAL_PROTO=https
+      - VIRTUAL_PORT=443
+#    command:
+#      - ./command/command.sh
 
 networks:
   proxy:
