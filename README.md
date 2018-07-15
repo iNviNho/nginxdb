@@ -4,7 +4,8 @@ Simple Nginx and DB setup using 2 separate commands to deploy them
 
 # Nginx
 
-To start nginx run **./deploy-nginx.sh**
+To start nginx for master run **./deploy-nginx-master.sh**  
+To start nginx for production run **./deploy-nginx-production.sh**
 
 # DB
 
