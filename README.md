@@ -9,7 +9,8 @@ To start nginx for production run **./deploy-nginx-production.sh**
 
 # DB
 
-To start database run **./deploy-database.sh**
+To start database for master run **./deploy-database-master.sh**
+To start database for production run **./deploy-database-production.sh**
 
 Hints 
 
