@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mv /etc/nginx/certs/cert2.pem /etc/nginx/certs/vladino.me.crt
-mv /etc/nginx/certs/privkey2.pem /etc/nginx/certs/vladino.me.key
+mv /etc/letsencrypt/archive/hazarder.vladino.me/cert1.pem /etc/letsencrypt/archive/hazarder.vladino.me/hazarder.vladino.me.crt
+mv /etc/letsencrypt/archive/hazarder.vladino.me/privkey1.pem /etc/letsencrypt/archive/hazarder.vladino.me/hazarder.vladino.me.key
