@@ -11,7 +11,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - .:/var/www/nginx-configuration
-      - /etc/letsencrypt/archive/hazarder.vladino.me:/etc/nginx/certs
+      - /etc/letsencrypt/archive/certs:/etc/nginx/certs
       - ./custom_nginx_configuration.conf:/etc/nginx/conf.d/custom_nginx_configuration.conf:ro
     networks:
       - proxy
